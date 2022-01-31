@@ -1,0 +1,40 @@
+.programm {
+  margin-bottom: 27px;
+}
+
+.programm__list {
+  @include list-reset;
+}
+
+.programm__item {
+  padding: 30px 20px 18px;
+  background-color: $grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.programm__title {
+  margin-bottom: 29px;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.programm__description {
+  padding-bottom: 23px;
+  border-bottom: 1px solid $border-grey;
+}
+
+.programm__to-programm {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $black;
+  text-decoration: none;
+}
