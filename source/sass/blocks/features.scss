@@ -1,0 +1,15 @@
+.features {
+  margin-bottom: 42px;
+}
+
+.features__list {
+  @include list-reset;
+}
+
+.features__item {
+  padding-left: 80px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
