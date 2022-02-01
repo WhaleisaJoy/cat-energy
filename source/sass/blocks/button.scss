@@ -1,6 +1,5 @@
 .button {
   padding: 7px;
-  background-color: $green;
   font-family: "Oswald";
   font-weight: 400;
   font-size: 14px;
@@ -8,10 +7,26 @@
   text-align: center;
   text-transform: uppercase;
   color: $white;
+  background-color: $green;
   border: none;
+  text-decoration: none;
 
   &:hover,
   &:active {
     background-color: $green-active;
+  }
+
+  &--alt-color {
+    color: $basic-dark;
+    background-color: $grey;
+
+    &:hover,
+    &:active {
+      background-color: $special-border-grey;
+    }
+
+    &:active {
+      color: rgba($basic-dark, 0.3%);
+    }
   }
 }

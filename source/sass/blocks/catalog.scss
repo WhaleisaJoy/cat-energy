@@ -1,0 +1,14 @@
+.catalog__list {
+  @include list-reset;
+  border-top: 1px solid $special-border-grey;
+  border-bottom: 1px solid $special-border-grey;
+}
+
+.catalog__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $special-border-grey;
+  }
+}

@@ -1,0 +1,25 @@
+.additional-goods__list {
+  @include list-reset;
+  border-top: 1px solid $radio-button-grey;
+  border-bottom: 1px solid $radio-button-grey;
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $radio-button-grey;
+  }
+}
+
+.additional-goods__offer {
+  background-color: $green;
+}
+
+.additional-goods__description {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+}
