@@ -1,0 +1,16 @@
+.card__title {
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.card__title a {
+  color: $special-dark-grey;
+  text-decoration: none;
+}
+
+.card__features {
+  font-size: 12px;
+  line-height: 16px;
+}
