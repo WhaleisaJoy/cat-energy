@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Cat Energy Form</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -31,82 +32,83 @@
     <main class="page-main">
       <section class="select-program">
         <div class="select-program__wrapper">
-          <h1 class="select-program__title">Подбор программы</h1>
+          <h1 class="select-program__title section-title">Подбор программы</h1>
           <p class="select-program__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
           <form class="select-program__form choose-program-form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset>
+            <fieldset class="choose-program-form__fieldset choose-program-form__fieldset--bottom-line">
               <legend class="visually-hidden">Данные кота</legend>
               <ul class="choose-program-form__list">
-                <li class="choose-program-form__item">
-                  <label for="choose-program-form-cat-name">ИМЯ:*</label>
-                  <input type="text" name="cat-name" id="choose-program-form-cat-name" placeholder="барсик" required>
+                <li class="choose-program-form__item choose-program-form__item--text">
+                  <label class="choose-program-form__label" for="choose-program-form-cat-name">ИМЯ:*</label>
+                  <input class="choose-program-form__input choose-program-form__input--text" type="text" name="cat-name" id="choose-program-form-cat-name" placeholder="барсик" required>
                 </li>
-                <li class="choose-program-form__item">
-                  <label for="choose-program-form-cat-weight">Вес (кг):*</label>
-                  <input type="number" name="cat-weight" id="choose-program-form-cat-weight" placeholder="7" required>
+                <li class="choose-program-form__item choose-program-form__item--text">
+                  <label class="choose-program-form__label" for="choose-program-form-cat-weight">Вес (кг):*</label>
+                  <input class="choose-program-form__input choose-program-form__input--text" type="number" name="cat-weight" id="choose-program-form-cat-weight" placeholder="7" required>
                 </li>
-                <li class="choose-program-form__item">
-                  <label for="choose-program-form-cat-age">Возраст (лет):</label>
-                  <input type="number" name="cat-age" id="choose-program-form-cat-age" placeholder="7">
+                <li class="choose-program-form__item choose-program-form__item--text">
+                  <label class="choose-program-form__label" for="choose-program-form-cat-age">Возраст (лет):</label>
+                  <input class="choose-program-form__input choose-program-form__input--text" type="number" name="cat-age" id="choose-program-form-cat-age" placeholder="7">
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="choose-program-form__fieldset choose-program-form__fieldset--bottom-line">
               <legend class="visually-hidden">Выбор программы</legend>
               <ul class="choose-program-form__list">
-                <li class="choose-program-form__item">
-                  <input type="radio" name="programm" id="choose-program-form-programm-weight-loss" checked>
-                  <label for="choose-program-form-programm-weight-loss">похудение</label>
+                <li class="choose-program-form__item choose-program-form__item--radio">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--radio" type="radio" name="programm" id="choose-program-form-programm-weight-loss" checked>
+                  <label class="choose-program-form__label choose-program-form__label--radio" for="choose-program-form-programm-weight-loss">похудение</label>
                 </li>
-                <li class="choose-program-form__item">
-                  <input type="radio" name="programm" id="choose-program-form-programm-weight-gain">
-                  <label for="choose-program-form-programm-weight-gain">Набор массы</label>
+                <li class="choose-program-form__item choose-program-form__item--radio">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--radio" type="radio" name="programm" id="choose-program-form-programm-weight-gain">
+                  <label class="choose-program-form__label choose-program-form__label--radio" for="choose-program-form-programm-weight-gain">Набор массы</label>
                 </li>
-                <li class="choose-program-form__item">
-                  <input type="radio" name="programm" id="choose-program-form-programm-need-advice">
-                  <label for="choose-program-form-programm-need-advice">Не знаю (Нужен ваш совет)</label>
+                <li class="choose-program-form__item choose-program-form__item--radio">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--radio" type="radio" name="programm" id="choose-program-form-programm-need-advice">
+                  <label class="choose-program-form__label choose-program-form__label--radio" for="choose-program-form-programm-need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="choose-program-form__fieldset">
               <legend class="choose-program-form__legend">Контактные данные (владельца кота)</legend>
               <ul class="choose-program-form__list">
-                <li class="choose-program-form__item">
-                  <label for="choose-program-form-owner-email">E-mail:*</label>
-                  <input type="email" name="owner-email" id="choose-program-form-owner-email" placeholder="kuklachev@gmail.com" required>
+                <li class="choose-program-form__item choose-program-form__item--text">
+                  <label class="choose-program-form__label" for="choose-program-form-owner-email">E-mail:*</label>
+                  <input class="choose-program-form__input choose-program-form__input--text choose-program-form__input--dark-border" type="email" name="owner-email" id="choose-program-form-owner-email" placeholder="kuklachev@gmail.com" required>
                 </li>
-                <li class="choose-program-form__item">
-                  <label for="choose-program-form-owner-phone">Телефон:*</label>
-                  <input type="text" name="owner-phone" id="choose-program-form-owner-phone" placeholder="8 (960) 900-60-90" required>
+                <li class="choose-program-form__item choose-program-form__item--text">
+                  <label class="choose-program-form__label" for="choose-program-form-owner-phone">Телефон:*</label>
+                  <input class="choose-program-form__input choose-program-form__input--text choose-program-form__input--dark-border" type="text" name="owner-phone" id="choose-program-form-owner-phone" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="choose-program-form__fieldset">
               <legend class="choose-program-form__legend">Комментарий</legend>
-              <textarea name="comment" id="choose-program-form-comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+              <textarea class="choose-program-form__textarea" name="comment" id="choose-program-form-comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="choose-program-form__fieldset">
               <legend class="choose-program-form__legend">Дополнительно</legend>
               <ul class="choose-program-form__list">
-                <li class="choose-program-form__item">
-                  <input type="checkbox" name="sweetener" id="choose-program-form-additionally-sweetener" checked>
-                  <label for="choose-program-form-additionally-sweetener">сахарозаменитель</label>
+                <li class="choose-program-form__item choose-program-form__item--checkbox">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--checkbox" type="checkbox" name="sweetener" id="choose-program-form-additionally-sweetener" checked>
+                  <label class="choose-program-form__label choose-program-form__label--checkbox" for="choose-program-form-additionally-sweetener">сахарозаменитель</label>
                 </li>
-                <li class="choose-program-form__item">
-                  <input type="checkbox" name="water" id="choose-program-form-additionally-water">
-                  <label for="choose-program-form-additionally-water">питьевая вода</label>
+                <li class="choose-program-form__item choose-program-form__item--checkbox">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--checkbox" type="checkbox" name="water" id="choose-program-form-additionally-water">
+                  <label class="choose-program-form__label choose-program-form__label--checkbox" for="choose-program-form-additionally-water">питьевая вода</label>
                 </li>
-                <li class="choose-program-form__item">
-                  <input type="checkbox" name="milk" id="choose-program-form-additionally-milk">
-                  <label for="choose-program-form-additionally-milk">молоко</label>
+                <li class="choose-program-form__item choose-program-form__item--checkbox">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--checkbox" type="checkbox" name="milk" id="choose-program-form-additionally-milk">
+                  <label class="choose-program-form__label choose-program-form__label--checkbox" for="choose-program-form-additionally-milk">молоко</label>
                 </li>
-                <li class="choose-program-form__item">
-                  <input type="checkbox" name="vitamins" id="choose-program-form-additionally-vitamins">
-                  <label for="choose-program-form-additionally-vitamins">витамины</label>
+                <li class="choose-program-form__item choose-program-form__item--checkbox">
+                  <input class="visually-hidden choose-program-form__input choose-program-form__input--checkbox" type="checkbox" name="vitamins" id="choose-program-form-additionally-vitamins">
+                  <label class="choose-program-form__label choose-program-form__label--checkbox" for="choose-program-form-additionally-vitamins">витамины</label>
                 </li>
               </ul>
             </fieldset>
@@ -122,18 +124,18 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
-          <p>приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </div>
 
       <div class="page-footer__map map">
-        <img src="" width="320" height="362" alt="Сравнение состояния кота до и после питания">
+        <img src="" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
       </div>
 
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
-          <img src="" width="128" height="24" alt="Сравнение состояния кота до и после питания">
+          <img src="" width="128" height="24" alt="Логотип интернет-магазина фитнес еды для котиков Cat Energy">
         </a>
 
         <div class="page-footer__social social">
