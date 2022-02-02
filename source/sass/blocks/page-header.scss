@@ -1,0 +1,7 @@
+.page-header__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 30px;
+  }
+}

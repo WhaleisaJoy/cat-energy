@@ -1,17 +1,38 @@
 .site-list {
-  @include list-reset;
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .site-list__item {
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-max-width) {
+    &:not(:last-child) {
+      box-shadow: 0 1px 0 $line-grey, inset 0 1px 0 $line-grey;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--active {
+      box-shadow: 0 2px 0 0 $green;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--active {
+      box-shadow: 0 2px 0 0 $white;
+    }
+  }
 }
 
 .site-list__item a {
   display: block;
+  padding: 22px 20px 24px;
   color: $black;
   text-decoration: none;
 
@@ -21,5 +42,13 @@
 
   &:active {
     color: rgba($black, 0.3%);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
   }
 }

@@ -1,5 +1,10 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
 .contacts__invite {
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;

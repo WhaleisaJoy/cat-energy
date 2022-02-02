@@ -4,6 +4,10 @@
 
 .programm__list {
   @include list-reset;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .programm__item {
@@ -17,7 +21,7 @@
 
 .programm__title {
   margin-bottom: 29px;
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -31,7 +35,7 @@
 }
 
 .programm__to-programm {
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;

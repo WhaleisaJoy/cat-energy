@@ -14,7 +14,7 @@
 
   margin-bottom: 35px;
   position: relative;
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-size: 24px;
   line-height: $line-height;
   color: $black;
@@ -47,7 +47,7 @@
 
 .choose-program-form__label {
   position: relative;
-  font-family: "Oswald";
+  font-family: $special-font-family;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -73,7 +73,7 @@
   }
 
   &--text::placeholder {
-    font-family: "Oswald";
+    font-family: $special-font-family;
     font-size: 16px;
     text-transform: uppercase;
     color: $basic-dark;
@@ -136,7 +136,7 @@
   resize: none;
 
   &::placeholder {
-    font-family: "Oswald";
+    font-family: $special-font-family;
     font-size: 16px;
     text-transform: uppercase;
     color: $basic-dark;
