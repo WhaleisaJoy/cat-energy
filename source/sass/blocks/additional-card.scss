@@ -1,3 +1,10 @@
+.additional-card {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .additional-card__title {
   font-family: $special-font-family;
   font-weight: 400;
@@ -9,4 +16,12 @@
 
 .additional-card__options {
   line-height: 14px;
+}
+
+.additional-card__make-order {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 36%;
+  }
 }
