@@ -4,4 +4,13 @@
   font-size: 36px;
   line-height: 40px;
   color: $black;
+
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
