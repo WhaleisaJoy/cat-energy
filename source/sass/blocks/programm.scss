@@ -1,4 +1,4 @@
-.programm {
+.programm__wrapper {
   margin-bottom: 27px;
 }
 
@@ -6,7 +6,9 @@
   @include list-reset;
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
   }
 }
 
@@ -17,9 +19,26 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 279px 53px 53px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 52px 55px;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .programm__title {
+  margin-top: 0;
   margin-bottom: 29px;
   font-family: $special-font-family;
   font-weight: 400;
@@ -27,18 +46,45 @@
   line-height: 37px;
   color: $black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    padding-left: 161px;
+  }
 }
 
 .programm__description {
+  margin-top: 0;
+  margin-bottom: 15px;
   padding-bottom: 23px;
   border-bottom: 1px solid $border-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .programm__to-programm {
   font-family: $special-font-family;
-  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: $black;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

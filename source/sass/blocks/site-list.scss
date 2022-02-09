@@ -11,19 +11,36 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (max-width: $mobile-max-width) {
+    text-align: center;
+
     &:not(:last-child) {
       box-shadow: 0 1px 0 $line-grey, inset 0 1px 0 $line-grey;
     }
   }
 
   @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+
     &--active {
       box-shadow: 0 2px 0 0 $green;
     }
   }
 
   @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
     &--active {
       box-shadow: 0 2px 0 0 $white;
     }

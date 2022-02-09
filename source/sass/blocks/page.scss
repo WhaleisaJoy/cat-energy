@@ -3,6 +3,7 @@
 }
 
 .page__body {
+  min-width: 320px;
   min-height: 100%;
   margin: 0;
   font-family: $basic-font-family;
@@ -10,4 +11,9 @@
   font-size: 14px;
   line-height: 18px;
   color: $basic-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

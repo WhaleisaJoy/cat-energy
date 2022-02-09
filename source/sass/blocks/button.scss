@@ -13,6 +13,7 @@
   text-decoration: none;
 
   &:hover,
+  &:focus,
   &:active {
     background-color: $green-active;
   }
@@ -22,6 +23,7 @@
     background-color: $grey;
 
     &:hover,
+    &:focus,
     &:active {
       background-color: $special-border-grey;
     }
@@ -29,5 +31,11 @@
     &:active {
       color: rgba($basic-dark, 0.3%);
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }

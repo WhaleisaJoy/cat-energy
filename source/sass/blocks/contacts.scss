@@ -3,15 +3,38 @@
   justify-content: space-between;
 }
 
+.contacts__invite,
+.contacts__address {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .contacts__invite {
   font-family: $special-font-family;
-  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__address {
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.contacts__city {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 20px;
+  }
 }
