@@ -1,8 +1,27 @@
+.card {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px;
+    background: linear-gradient($white 81px, $grey 81px);
+  }
+}
+
 .card__title {
+  margin-top: 0;
+  margin-bottom: 18px;
   font-family: $special-font-family;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .card__title a {
@@ -11,6 +30,24 @@
 }
 
 .card__features {
+  margin-bottom: 22px;
   font-size: 12px;
   line-height: 16px;
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.card__features tr {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $radio-button-grey;
+  }
+}
+
+.card__value {
+  text-align: right;
 }

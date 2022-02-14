@@ -1,3 +1,10 @@
+.show-more {
+  @media (min-width: $tablet-width) {
+    padding: 38px;
+    border: 2px solid $grey;
+  }
+}
+
 .show-more__title {
   font-family: $special-font-family;
   font-size: 16px;
@@ -5,10 +12,20 @@
   text-align: center;
   text-transform: uppercase;
   color: $special-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .show-more__description {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
