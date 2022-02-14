@@ -1,7 +1,18 @@
+.additional-goods__inner {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .additional-goods__list {
   @include list-reset;
   border-top: 1px solid $radio-button-grey;
   border-bottom: 1px solid $radio-button-grey;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    border: 1px solid $radio-button-grey;
+  }
 }
 
 .additional-goods__item {
@@ -10,6 +21,10 @@
 
   &:not(:last-child) {
     border-bottom: 1px solid $radio-button-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px;
   }
 }
 

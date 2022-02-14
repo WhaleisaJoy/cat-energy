@@ -1,3 +1,12 @@
+.catalog__wrapper {
+  padding-top: 27px;
+}
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 41px;
+}
+
 .catalog__list {
   @include list-reset;
   border-top: 1px solid $special-border-grey;
@@ -6,10 +15,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
   }
 }
 
