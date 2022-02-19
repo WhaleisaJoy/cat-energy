@@ -2,4 +2,49 @@
   @include list-reset;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 6px;
+  }
+}
+
+.social__link {
+  display: block;
+  padding: 10px;
+  fill: $grey-1000;
+
+  &:hover,
+  &:focus {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 12px 10px 12px;
+  }
+}
+
+.social__link-img {
+  @media (min-width: $tablet-width) {
+    width: auto;
+    display: block;
+
+    &--vk {
+      height: 22px;
+    }
+
+    &--instagram {
+      height: 24px;
+    }
+
+    &--fb {
+      height: 33px;
+    }
+  }
 }

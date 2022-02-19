@@ -1,5 +1,16 @@
 .features__wrapper {
   margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 45px;
+    border-bottom: 1px solid $line-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 13px;
+    border-bottom: none;
+  }
 }
 
 .features__list {
@@ -8,7 +19,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 135px;
+    gap: 36px 60px;
     counter-reset: number;
   }
 
@@ -19,32 +30,77 @@
 }
 
 .features__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
   padding-left: 80px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--ingredients::before {
+    background-image: url("../img/features-ingredients.svg");
+  }
+
+  &--condition::before {
+    background-image: url("../img/features-condition.svg");
+  }
+
+  &--meal::before {
+    background-image: url("../img/features-meal.svg");
+  }
+
+  &--progress::before {
+    background-image: url("../img/features-progress.svg");
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 151px 29px 57px 0;
+    margin-right: 79px;
+    padding: 152px 0px 57px 0;
 
     &:not(:last-child) {
       margin-bottom: 0;
     }
 
     &::before {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
       counter-increment: number;
       content: counter(number);
       position: absolute;
       top: 0;
       right: 0;
+      min-width: 135px;
       font-family: $special-font-family;
       font-size: 280px;
       line-height: 280px;
+      text-align: center;
       color: $grey;
       z-index: -1;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
