@@ -1,6 +1,28 @@
 .contacts {
   display: flex;
   justify-content: space-between;
+
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 57px;
+    padding-left: 71px;
+    padding-right: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 63px;
+    padding-bottom: 57px;
+    padding-left: 76px;
+    padding-right: 90px;
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+  }
 }
 
 .contacts__invite,
@@ -10,15 +32,20 @@
 }
 
 .contacts__invite {
+  margin-right: 25px;
   font-family: $special-font-family;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
   color: $special-dark;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 25px;
   }
 }
 
@@ -29,6 +56,10 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

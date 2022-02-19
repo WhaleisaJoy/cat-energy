@@ -1,5 +1,13 @@
 .programm__wrapper {
   margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .programm__list {
@@ -13,6 +21,7 @@
 }
 
 .programm__item {
+  position: relative;
   padding: 30px 20px 18px;
   background-color: $grey;
 
@@ -20,19 +29,112 @@
     margin-bottom: 20px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  &--slim::after,
+  &--pro::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim::after {
+    top: 21px;
+    left: 29px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/programm-cat-1.svg");
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/programm-cat-2.svg");
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 77px 279px 53px 53px;
+    padding: 77px 279px 56px 52px;
+
+    &--pro {
+      padding-right: 312px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    &::before {
+      top: 50%;
+      right: 62px;
+      left: auto;
+      width: 200px;
+      height: 200px;
+      transform: translateY(-50%);
+    }
+
+    &--slim::after {
+      top: 81px;
+      right: 91px;
+      left: auto;
+      width: 140px;
+      height: 192px;
+      background-size: 140px 192px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      right: 27px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+      background-size: 268px 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 77px 52px 55px;
+    padding: 77px 52px 58px;
 
     &:not(:last-child) {
       margin-bottom: 0px;
+    }
+
+    &::before {
+      top: 47px;
+      right: auto;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+      transform: none;
+    }
+
+    &--slim::after {
+      top: 41px;
+      right: auto;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+      background-size: 70px 97px;
+    }
+
+    &--pro::after {
+      top: 67px;
+      right: auto;
+      left: 33px;
+      width: 134px;
+      height: 56px;
+      background-size: 134px 56px;
     }
   }
 }
@@ -40,6 +142,7 @@
 .programm__title {
   margin-top: 0;
   margin-bottom: 29px;
+  padding-left: 71px;
   font-family: $special-font-family;
   font-weight: 400;
   font-size: 24px;
@@ -48,42 +151,60 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
+    padding-left: 0;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 73px;
+    margin-bottom: 75px;
     padding-left: 161px;
   }
 }
 
 .programm__description {
   margin-top: 0;
-  margin-bottom: 15px;
-  padding-bottom: 23px;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $border-grey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 48px;
+    margin-bottom: 51px;
     padding-bottom: 0px;
     border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 26px;
   }
 }
 
 .programm__to-programm {
+  position: relative;
+  padding-right: 40px;
   font-family: $special-font-family;
   font-size: 16px;
   line-height: 16px;
   color: $black;
   text-decoration: none;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
 
   @media (min-width: $tablet-width) {
+    padding-right: 49px;
     font-size: 20px;
     line-height: 30px;
   }

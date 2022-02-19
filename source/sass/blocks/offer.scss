@@ -1,32 +1,165 @@
+.offer {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 302px;
+    background-color: $dark-grey;
+    background-image: linear-gradient(rgba($green, 0.85), rgba($green, 0.85)),
+      url("../img/offer-bg-mobile.jpg");
+    background-size: auto 302px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($green, 0.85), rgba($green, 0.85)),
+        url("../img/offer-bg-mobile@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: initial;
+
+    &::before {
+      content: "";
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      background-image: linear-gradient(rgba($green, 0.85), rgba($green, 0.85)),
+        url("../img/offer-bg-desktop.jpg");
+      background-size: auto 694px;
+      background-position: top left;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            rgba($green, 0.85),
+            rgba($green, 0.85)
+          ),
+          url("../img/offer-bg-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
 .offer__wrapper {
   margin-bottom: 22px;
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+    padding-top: 52px;
+    padding-left: 190px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.offer__inner {
+  @media (min-width: $tablet-width) {
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .offer__title {
+  margin-top: 0;
+  margin-bottom: 25px;
   font-family: $special-font-family;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
   color: $white;
 
   @media (min-width: $tablet-width) {
-    text-align: left;
+    margin-bottom: 42px;
+    font-size: 60px;
+    line-height: 60px;
     color: $black;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
   }
 }
 
 .offer__slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
   font-family: $special-font-family;
-  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  text-align: center;
   color: $white;
 
   @media (min-width: $tablet-width) {
-    text-align: left;
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
     color: $black;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.offer__image {
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin-top: -83px;
+    margin-bottom: -28px;
+    text-align: center;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin-top: -82px;
+    margin-bottom: 45px;
+    margin-left: -202px;
+    text-align: left;
+    z-index: 0;
+  }
+}
+
+.offer__choose-program {
+  padding: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 82px;
+    width: fit-content;
+    padding: 17px 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }

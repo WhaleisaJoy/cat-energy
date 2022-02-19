@@ -1,0 +1,28 @@
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: $basic-dark;
+  text-decoration: none;
+  fill: $grey-1000;
+
+  &:hover,
+  &:focus {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.copyright__img {
+  @media (min-width: $tablet-width) {
+    margin-left: 24px;
+  }
+}

@@ -2,6 +2,33 @@
   display: block;
 
   &--page-header {
-    padding: 12px 20px 16px;
+    padding: 11px 0px 13px;
   }
+
+  &--page-footer {
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 27px;
+      text-align: center;
+      border-bottom: 1px solid $border-grey;
+    }
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--page-header {
+      padding: 0;
+    }
+  }
+}
+
+.logo--page-footer img {
+  display: block;
 }
