@@ -32,14 +32,16 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: 9px;
-  width: 13px;
-  height: 13px;
-  background-color: $green;
+  left: 7px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icons/check.svg");
+  background-repeat: no-repeat;
   transform: translate(0, -50%);
 
   @media (min-width: $tablet-width) {
-    left: 9px;
+    top: calc(50% + 2px);
+    left: 11px;
     width: 18px;
     height: 18px;
   }

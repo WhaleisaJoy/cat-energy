@@ -25,6 +25,10 @@
   line-height: $line-height;
   color: $black;
 
+  // & span {
+  //   background-color: $white;
+  // }
+
   &::after {
     content: "";
     position: absolute;
@@ -37,7 +41,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 77px;
     font-size: 36px;
     line-height: 36px;
     background-color: $white;
@@ -54,9 +58,15 @@
     // }
 
     &::after {
-      top: ($line-height / 2);
+      top: 22px;
       left: 0;
       width: 100vw;
     }
+  }
+}
+
+.title--extra {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
   }
 }

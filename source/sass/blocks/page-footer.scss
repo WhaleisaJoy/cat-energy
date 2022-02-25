@@ -10,15 +10,6 @@
   &--no-bg-color {
     background-color: $white;
   }
-
-  @media (min-width: $desktop-width) {
-    &--top {
-      position: absolute;
-      top: 95px;
-      left: 110px;
-      width: 570px;
-    }
-  }
 }
 
 .page-footer__map-wrapper {

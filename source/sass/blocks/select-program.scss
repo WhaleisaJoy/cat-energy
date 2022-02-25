@@ -1,23 +1,26 @@
 .select-program__wrapper {
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 35px;
     padding-bottom: 72px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding-left: 70px;
     padding-right: 70px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 77px;
+    padding-top: 15px;
     padding-bottom: 82px;
   }
 }
 
 .select-program__title {
   margin-top: 0;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;
@@ -30,7 +33,7 @@
 
 .select-program__intro {
   margin-top: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   font-family: $special-font-family;
   text-transform: uppercase;
   color: $black;
