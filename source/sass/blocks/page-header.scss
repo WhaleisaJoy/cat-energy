@@ -1,3 +1,21 @@
+.page-header {
+  @media (max-width: $mobile-max-width) {
+    &--bottom-line {
+      position: relative;
+    }
+
+    &--bottom-line::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $border-grey;
+    }
+  }
+}
+
 .page-header__wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
