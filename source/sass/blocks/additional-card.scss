@@ -2,7 +2,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 32% 32% 27%;
   }
 }
 
@@ -17,17 +23,32 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .additional-card__options {
+  width: 100%;
   margin-bottom: 15px;
   line-height: 14px;
+  border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 0;
     line-height: 20px;
+  }
+}
+
+.additional-card__options-td {
+  padding: 0;
+}
+
+.additional-card__key {
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
   }
 }
 
@@ -37,8 +58,15 @@
 
 .additional-card__make-order {
   width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 36%;
+    margin-top: 0;
   }
 }
